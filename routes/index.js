@@ -1,6 +1,6 @@
 
 /*
- * GET home page.
+ * GET browse or home page.
  */
 
 exports.view = function(req, res){
