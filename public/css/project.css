@@ -4,25 +4,54 @@ body
 	background-color : black;
 }
 
+a:link {color: black;}      /* unvisited link */
+a:visited {color: black;}   /* visited link */
+a:hover {color: black;}     /* mouse over link */
+a:active {color: black;}    /* selected link */
+
 .screen
 {
-	margin-left : 35%;
-	width : 30%;
-	height : 98%;
-	margin-top : 1%;
-	margin-bottom : 1%;
+	height : 5%;
 	background-color : white;
 }
 
 .phonestatus
 {
-	height : 3%;
+	height : 5%;
+	width:100%;
 	background-color : lightgrey;
 }
 
 .phonestatus .icon
 {
 	float : right !important; 
-	padding : 2px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	padding-top: 10px !important;
 }
 
+.status .icon
+{
+	float : right !important; 
+	padding-top : 8px;
+}
+
+.status .licon
+{
+	float : left !important; 
+	padding-top : 8px;
+}
+
+.status
+{
+	height : 7%;
+	background-color : gray;
+}
+
+.status .studentname
+{
+	float : left !important; 
+	padding-top : 1%;
+	padding-left:40%; 
+	font-weight:bold;
+}

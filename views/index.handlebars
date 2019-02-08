@@ -1,22 +1,42 @@
 <html>
 <head>
 	<title>Home Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="/css/project.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="screen">
+<div class="container">
 
-		<div class="phonestatus">
+	<div class="container phonestatus">
 			<b class="icon">04:20</b>
 			<i class="fas fa-wifi icon"></i>
 			<i class="fas fa-signal icon"></i>
 			<i class="fas fa-battery-three-quarters icon"></i>
-		</div>
-		
 	</div>
+
+		<div class="status container">
+			<a href="/"> <i class="fas fa-home fa-2x licon"></i> </a>
+			<div class="studentname"> Student Name </div>
+			<div class="dropdown">
+			  <i class="fas fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  </i>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			    <a class="dropdown-item" href="/profile">Profile</a>
+			    <a class="dropdown-item" href="/signout">Signout</a>
+			    <a class="dropdown-item" href="/help">Help</a>
+			  </div>
+			</div>
+		</div>
+
+	</div>
+</div>	
 <!--
 REFERENCES:
 1) Smart Icons
 -->
 </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
