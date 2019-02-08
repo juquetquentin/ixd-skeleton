@@ -93,3 +93,23 @@ body{
     height:100%;
     background-color : black;
 }
+
+.fullscreen
+{
+	float:right; padding-right:20px
+}
+
+.forward
+{
+	padding-left:30%
+}
+
+.rewind
+{
+	padding-right:30%
+}
+
+.modalpos
+{
+	float:right;padding-top:20px; padding-right:20px;
+}

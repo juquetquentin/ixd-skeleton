@@ -3,6 +3,7 @@
 	<title>Playback Page</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="/css/project.css" rel="stylesheet">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -29,15 +30,75 @@
 			</div>
 		</div>
 
+		<div class="card">
+		  <h5> <button type="button" class="fas fa-cog fa-lg modalpos" data-toggle="modal" data-target=".bd-example-modal-sm"></button> </h5>
+		  <h4 align="center" > Complexity Analysis - Algorithms  </h4>
+		  <h5 align="center" > Professor Scott - 2nd Feb 2019 </h5>
+		  <br><br><br>
+		  <p class="lead" align="center">
+		  	<a href="/playback" class="rewind"><i class="fa fa-backward fa-3x" aria-hidden="true"></i></a>
+		    <a href="/playback"><i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
+		    <a href="/playback" class="forward"><i class="fa fa-forward fa-3x" aria-hidden="true"></i></a>
+		  </p>
+		  <br><br><br>
+		  <div><i class="fa fa-arrows-alt fa-3x fullscreen" aria-hidden="true"></i></div>
+		  <div class="progress">
+					  <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+				   </div>
+			</div>
+		</div>
+
+
+		<!-- Modal -->
+		<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		    	<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+				    <label class="input-group-text" for="inputGroupSelect01">Language</label>
+				  </div>
+				  <select class="custom-select" id="inputGroupSelect01">
+				    <option selected>Choose...</option>
+				    <option value="1">English</option>
+				    <option value="2">Spanish</option>
+				    <option value="3">French</option>
+				  </select>
+				</div>
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+				    <label class="input-group-text" for="inputGroupSelect01">Font Size</label>
+				  </div>
+				  <select class="custom-select" id="inputGroupSelect01">
+				    <option selected>Choose...</option>
+				    <option value="1">Small</option>
+				    <option value="2">Medium</option>
+				    <option value="3">Large</option>
+				  </select>
+				</div>
+		    	<div><span class="label label-default"> Transcripts </span>  <input type="checkbox" checked data-toggle="toggle"></input> <br> <br></div>
+			   <div><span class="label label-default"> Subtitles </span> <input type="checkbox" checked data-toggle="toggle"></input> <br></div><br>
+			   <div class="modal-footer">
+		        <button type="button" class="btn btn-light" data-dismiss="modal"> Close </button>
+		        <button type="button" class="btn btn-dark" data-dismiss="modal">Save Settings</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
 	</div>
 </div>	
 <!--
 REFERENCES:
 1) Smart Icons
+2) Bootstrap toggle
 -->
 </body>
+   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+     
 </html>
 
