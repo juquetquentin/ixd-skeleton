@@ -13,6 +13,7 @@ var profile = require('./routes/profile');
 var signout = require('./routes/signout');
 var help = require('./routes/help');
 var playback = require('./routes/playback');
+var signin = require('./routes/signin');
 // Example route
 // var user = require('./routes/user');
 
@@ -38,6 +39,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/signin', signin.view);
 app.get('/', index.view);
 app.get('/playback', playback.view);
 app.get('/help', help.view);
