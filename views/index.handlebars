@@ -15,30 +15,21 @@
 			<i class="fas fa-battery-three-quarters icon"></i>
 	</div>
 
-		<div class="status container">
-			<a href="/"> <i class="fas fa-home fa-2x licon"></i> </a>
-			<div class="studentname"> Student Name </div>
-			<div class="dropdown">
-			  <i class="fas fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  </i>
-			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a class="dropdown-item" href="/profile">Profile</a>
-			    <a class="dropdown-item" href="/signout">Signout</a>
-			    <a class="dropdown-item" href="/help">Help</a>
-			  </div>
+
+
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle dropdown-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Recently missed
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<button class="dropdown-item" id="classa">Class A</button>
+				<button class="dropdown-item" id="classb">Class B</button>
+				<button class="dropdown-item" id="classcse">CSE courses</button>
 			</div>
 		</div>
 
-		<nav class="navbar navbar-light bg-light">
-		  <div class="center">
-			    <button class="fas fa-angle-left fa-2x larrow" id="goleft"> </i> </button>
-			    <span class="screenlabel" id="screenlabel">  Recently missed  </span>
-			    <button class="fas fa-angle-right fa-2x rarrow" id="goright"></button>
-		  </div>
-		</nav>
-
 		<br>
-		<div class="card">
+		<div class="card custom-card-left">
 		  <h5 align="center" > Algorithms - Searching & Sorting </h5>
 		  <br>
 		  <p class="lead" align="center">
@@ -46,11 +37,10 @@
 		  </p>
 		  <p class="lead"  align="center"> Professor Scott </p>
 		  <hr class="my-1" >
-		  <p  align="center"> 2nd Feb 2019 </p>
+		  <p  align="center"> 2nd Feb 2019, Duration: 59:32</p>
 		</div>
 
-		<br>
-		<div class="card">
+		<div class="card custom-card-right">
 		  <h5 align="center" > Algorithms - NP Hard Problems </h5>
 		  <br>
 		  <p class="lead" align="center">
@@ -58,12 +48,47 @@
 		  </p>
 		  <p class="lead"  align="center"> Professor Scott </p>
 		  <hr class="my-1" >
-		  <p  align="center"> 1st Feb 2019 </p>
+		  <p  align="center"> 1st Feb 2019, Duration: 1:04:21</p>
+		</div>
+
+		<div class="card custom-card-left">
+			<h5 align="center" > Algorithms - Searching & Sorting </h5>
+			<br>
+			<p class="lead" align="center">
+				<a href="/playback"><i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
+			</p>
+			<p class="lead"  align="center"> Professor Scott </p>
+			<hr class="my-1" >
+			<p  align="center"> 2nd Feb 2019, Duration: 59:32</p>
+		</div>
+
+		<div class="card custom-card-right">
+			<h5 align="center" > Algorithms - NP Hard Problems </h5>
+			<br>
+			<p class="lead" align="center">
+				<a href="/playback"><i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
+			</p>
+			<p class="lead"  align="center"> Professor Scott </p>
+			<hr class="my-1" >
+			<p  align="center"> 1st Feb 2019, Duration: 1:04:21</p>
 		</div>
 		<br>
 
 	</div>
-</div>	
+</div>
+
+<div class="status container">
+	<a href="/"> <i class="fas fa-home fa-2x licon"></i> </a>
+	<div class="studentname"> John Smith </div>
+	<div class="dropdown">
+		<i class="fas fa-user-cog fa-2x icon rightMenu" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<a class="dropdown-item" href="/profile">Profile</a>
+			<a class="dropdown-item" href="/signout">Signout</a>
+			<a class="dropdown-item" href="/help">Help</a>
+		</div>
+	</div>
+</div>
 <!--
 REFERENCES:
 1) Smart Icons
