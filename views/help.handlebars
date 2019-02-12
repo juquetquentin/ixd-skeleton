@@ -6,34 +6,78 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="container phonestatus">
-			<b class="icon">04:20</b>
-			<i class="fas fa-wifi icon"></i>
-			<i class="fas fa-signal icon"></i>
-			<i class="fas fa-battery-three-quarters icon"></i>
+	<div class="row" style="background-color:white; height:5%">
+		<div class="col-md-10"></div>
+		<div class="col-md-2">
+			<b class="icon" style="float:right; padding-left:3%">04:20</b>
+			<i class="fas fa-wifi icon" style="float:right; padding-left:3%"></i>
+			<i class="fas fa-signal icon" style="float:right; padding-left:3%"></i>
+			<i class="fas fa-battery-three-quarters icon" style="float:right; padding-left:3%"></i>
+		</div>
 	</div>
-
-	<div class="container">
-
-		<div class="status container">
-			<a href="/"> <i class="fas fa-home fa-2x licon"></i> </a>
-			<div class="studentname"> Student Name </div>
+	<div class="row" style="background-color:#006A96; height:10%; align-items:center; display: flex">
+		<div class="col-md-2" align="center" style="width: 33%">
+			<a href="/"> <i class="fas fa-home fa-2x licon" style="color:white;"></i> </a>
+		</div>
+		<div class="col-md-8" align="center" style="width: 33%">
+			<h3 style="color:white">ProfScribe</h3>
+		</div>
+		<div class="col-md-2" align="center" style="width: 33%">
 			<div class="dropdown">
-			  <i class="fas fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  </i>
-			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a class="dropdown-item" href="/profile">Profile</a>
-			    <a class="dropdown-item" href="/signout">Signout</a>
-			    <a class="dropdown-item" href="/help">Help</a>
-			  </div>
+				<i class="fas fa-bars fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+				</i>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="/profile">Profile</a>
+					<a class="dropdown-item" href="/signin">Signout</a>
+					<a class="dropdown-item" href="/help">Help</a>
+				</div>
 			</div>
 		</div>
-		</br>
-		<h2> Help Page </h2>
+	</div>
+	<div class="row" style="background-color:#006A96; height:25%;" >
+		<div class="col-md-12" align="center" style="background-color: white">
+  				<h2>Help</h2>
+  				<hr class="my-3">
+  				<p class="lead">Filler Text: where a search bar will be implemented</p>
+  				
+			
+		</div>
+		<hr class="my-3">
+		<div class="col-md-12" align="center" style="background-color: #006A96">
+  				
+  				<h3 style="color: white">Frequently Asked Questions:</h3>
+			
+		</div>
+	</div>
+	<div class="row" style="background-color: lightgray; height:60% ">
+		<div class="col-md-12">
+			<div class="list-group">
+  				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+   					<div class="d-flex w-100 justify-content-between">
+      					<h4 class="mb-1">How do I view a video?</h4>
+    				</div>
+   					<p class="mb-1" style="color:gray">From <b style="color: black">Home</b>, click the <b style="color: black">Play</b> button on the thumbnail of the video you want to watch to navigate to that video's playback page.</p>
+  				</a>
+  				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    				<div class="d-flex w-100 justify-content-between">
+     					<h4 class="mb-1">How do I add a language for subtitles or transcripts?</h4>
+    				</div>
+    				<p class="mb-1" style="color:gray">Under <b style="color: black">Profile</b>, click <b style="color: black">Add Language</b> and select a language to add it to your languages. </p>
+  				</a>
+  				<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    				<div class="d-flex w-100 justify-content-between">
+     					 <h4 class="mb-1">How do I remove subtitles or transcripts?</h4>
+   					</div>
+   					<p class="mb-1" style="color:gray">In the <b style="color: black">Playback</b> page, click the <b style="color: black">Gear Icon</b> to toggle subtitle or transcript visibility.</p>
+  				</a>
+			</div>
+		</div>
 	</div>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!--<script src="js/help.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 </html>
