@@ -1,101 +1,107 @@
 <html>
-<head>
-	<title>Home Page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="/css/project.css" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<div class="container" >
+	<head>
+		<title>Playback Page</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+			<link href="/css/project.css" rel="stylesheet">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				</head>
+				<body >
+					<div class="row" style="background-color:white; height:5%">
+						<div class="col-md-10"></div>
+						<div class="col-md-2">
+							<b class="icon" style="float:right; padding-left:3%">04:20</b>
+							<i class="fas fa-wifi icon" style="float:right; padding-left:3%"></i>
+							<i class="fas fa-signal icon" style="float:right; padding-left:3%"></i>
+							<i class="fas fa-battery-three-quarters icon" style="float:right; padding-left:3%"></i>
+						</div>
+					</div>
+					<div class="row" style="background-color:#006A96; height:10%">
+						<div class="col-md-2" align="center">
+							<a href="/"> <i class="fas fa-home fa-2x licon" style="color:white"></i> </a>
+						</div>
+						<div class="col-md-8" align="center" style="padding-top:1%">
+							<h3 style="color:white">ProfScribe</h3>
+						</div>
+						<div class="col-md-2" align="center">
+							<div class="dropdown">
+							  <i class="fas fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+							  </i>
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="/profile">Profile</a>
+							    <a class="dropdown-item" href="/signout">Signout</a>
+							    <a class="dropdown-item" href="/help">Help</a>
+							  </div>
+							</div>
+						</div>
+					</div>
 
-	<div class="container phonestatus">
-			<b class="icon">04:20</b>
-			<i class="fas fa-wifi icon"></i>
-			<i class="fas fa-signal icon"></i>
-			<i class="fas fa-battery-three-quarters icon"></i>
-	</div>
+					<div class="row" style="background-color:white">
+						<div class="col-md-12" align="center" style="padding-top:1%;padding-bottom:1%">
+									<div class="dropdown">
+									  <button class="btn btn-secondary btn-lg dropdown-toggle btn-success" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton" >
+									    Recently Uploaded
+									  </button>
+									  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<button class="dropdown-item" id="classa">Class A</button>
+											<button class="dropdown-item" id="classb">Class B</button>
+											<button class="dropdown-item" id="classcse">CSE courses</button>
+									  </div>
+									</div>
+						</div>
+					</div>
+
+		 <div class="row" style="background-color:white; height:100%">
+            	<div class="col-md-4">
+            		<a href="/playback">
+		       			<div class="card">
+						    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/UCT_Leslie_Social_Science_lecture_theatre_class.JPG/440px-UCT_Leslie_Social_Science_lecture_theatre_class.JPG" alt="Card image cap">
+						    <div class="card-body">
+						      <h5 class="card-title">Algorithms - Searching & Sorting</h5>
+						      <p class="card-text"> Professor Scott </p>
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">2nd Feb 2019, Duration: 59:32</small>
+						    </div>
+					</a>
+					  </div>
+				</div>
+				<div class="col-md-4">
+					<a href="/playback">
+		       			<div class="card">
+						    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Paris_sorbonne_colloque_prog.jpg/440px-Paris_sorbonne_colloque_prog.jpg">
+						    <div class="card-body">
+						      <h5 class="card-title">Algorithms - NP Completeness</h5>
+						      <p class="card-text"> Professor Scott </p>
+						    </div>
+						    <div class="card-footer">
+						      <small class="text-muted">2nd Feb 2019, Duration: 59:32</small>
+						    </div>
+					</a>
+					  </div>
+				</div>
+				<div class="col-md-4">
+					<a href="/playback">
+	       			<div class="card">
+					    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/UCT_Leslie_Social_Science_lecture_theatre_class.JPG/440px-UCT_Leslie_Social_Science_lecture_theatre_class.JPG">
+					    <div class="card-body">
+					      <h5 class="card-title">Algorithms - Flow Algorithms</h5>
+					      <p class="card-text"> Professor Scott </p>
+					    </div>
+					    <div class="card-footer">
+					      <small class="text-muted">2nd Feb 2019, Duration: 59:32</small>
+					    </div>
+					    </a>
+					  </div>
+				</div>
+            </div>
 
 
 
-		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle dropdown-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Recently missed
-			</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<button class="dropdown-item" id="classa">Class A</button>
-				<button class="dropdown-item" id="classb">Class B</button>
-				<button class="dropdown-item" id="classcse">CSE courses</button>
-			</div>
-		</div>
-
-		<br>
-		<div class="card custom-card-left">
-		  <h5 align="center" > Algorithms - Searching & Sorting </h5>
-		  <br>
-		  <p class="lead" align="center">
-		    <a href="/playback"><i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
-		  </p>
-		  <p class="lead"  align="center"> Professor Scott </p>
-		  <hr class="my-1" >
-		  <p  align="center"> 2nd Feb 2019, Duration: 59:32</p>
-		</div>
-
-		<div class="card custom-card-right">
-		  <h5 align="center" > Algorithms - NP Hard Problems </h5>
-		  <br>
-		  <p class="lead" align="center">
-		    <a href="/playback"><i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
-		  </p>
-		  <p class="lead"  align="center"> Professor Scott </p>
-		  <hr class="my-1" >
-		  <p  align="center"> 1st Feb 2019, Duration: 1:04:21</p>
-		</div>
-
-		<div class="card custom-card-left">
-			<h5 align="center" > Algorithms - Searching & Sorting </h5>
-			<br>
-			<p class="lead" align="center">
-				<a href="/playback"><i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
-			</p>
-			<p class="lead"  align="center"> Professor Scott </p>
-			<hr class="my-1" >
-			<p  align="center"> 2nd Feb 2019, Duration: 59:32</p>
-		</div>
-
-		<div class="card custom-card-right">
-			<h5 align="center" > Algorithms - NP Hard Problems </h5>
-			<br>
-			<p class="lead" align="center">
-				<a href="/playback"><i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
-			</p>
-			<p class="lead"  align="center"> Professor Scott </p>
-			<hr class="my-1" >
-			<p  align="center"> 1st Feb 2019, Duration: 1:04:21</p>
-		</div>
-		<br>
-
-	</div>
-</div>
-
-<div class="status container">
-	<a href="/"> <i class="fas fa-home fa-2x licon"></i> </a>
-	<div class="studentname"> John Smith </div>
-	<div class="dropdown">
-		<i class="fas fa-user-cog fa-2x icon rightMenu" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="/profile">Profile</a>
-			<a class="dropdown-item" href="/signout">Signout</a>
-			<a class="dropdown-item" href="/help">Help</a>
-		</div>
-	</div>
-</div>
-<!--
-REFERENCES:
-1) Smart Icons
--->
 </body>
+   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/browse.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+     
 </html>
