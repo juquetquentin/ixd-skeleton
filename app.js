@@ -47,6 +47,8 @@ app.get('/liveplayback', liveplayback.view);
 app.get('/help', help.view);
 app.get('/signout', signout.view);
 app.get('/profile', profile.view);
+
+app.post('/profile', profile.updateProfile);
 // Example route
 // app.get('/users', user.list);
 
