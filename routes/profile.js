@@ -17,15 +17,11 @@ exports.updateProfile = function (req, res) {
     data.universityName = req.body.university;
   if( req.body.language1 )
     data.language = req.body.language1;
-  fs.writeFile(fileName, JSON.stringify(file), function (err) {
-    if (err)
-      return console.log(err);
-    console.log(JSON.stringify(file));
-    console.log('writing to ' + fileName);
-    res.redirect('back');
-  });
+  fs.writeFileSync(fileName, JSON.stringify(file));
+  res.render('index');
 };
 
 exports.view = function(req, res){
+  let data = require('../data.json');
   res.render('profile', data);
 };
