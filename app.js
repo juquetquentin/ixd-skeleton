@@ -13,6 +13,7 @@ var profile = require('./routes/profile');
 var signout = require('./routes/signout');
 var help = require('./routes/help');
 var playback = require('./routes/playback');
+var liveplayback = require('./routes/liveplayback');
 var signin = require('./routes/signin');
 // Example route
 // var user = require('./routes/user');
@@ -42,6 +43,7 @@ if ('development' == app.get('env')) {
 app.get('/signin', signin.view);
 app.get('/', index.view);
 app.get('/playback', playback.view);
+app.get('/liveplayback', liveplayback.view);
 app.get('/help', help.view);
 app.get('/signout', signout.view);
 app.get('/profile', profile.view);
