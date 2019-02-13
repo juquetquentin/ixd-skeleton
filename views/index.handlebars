@@ -5,7 +5,7 @@
 			<link href="/css/project.css" rel="stylesheet">
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 				</head>
-				<body >
+				<body>
 					<div class="row" style="background-color:white; height:5%">
 						<div class="col-md-10"></div>
 						<div class="col-md-2">
@@ -50,49 +50,23 @@
 					</div>
 
 		 <div class="row" style="background-color:white; height:100%">
-            	<div class="col-md-4">
-            		<a href="/playback">
-		       			<div class="card">
-						    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/UCT_Leslie_Social_Science_lecture_theatre_class.JPG/440px-UCT_Leslie_Social_Science_lecture_theatre_class.JPG" alt="Card image cap">
-						    <div class="card-body">
-						      <h5 class="card-title">Algorithms - Searching & Sorting</h5>
-						      <p class="card-text"> Professor Scott </p>
-						    </div>
-						    <div class="card-footer">
-						      <small class="text-muted">2nd Feb 2019, Duration: 59:32</small>
-						    </div>
-					</a>
-					  </div>
-				</div>
-				<div class="col-md-4">
-					<a href="/playback">
-		       			<div class="card">
-						    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Paris_sorbonne_colloque_prog.jpg/440px-Paris_sorbonne_colloque_prog.jpg">
-						    <div class="card-body">
-						      <h5 class="card-title">Algorithms - NP Completeness</h5>
-						      <p class="card-text"> Professor Scott </p>
-						    </div>
-						    <div class="card-footer">
-						      <small class="text-muted">2nd Feb 2019, Duration: 59:32</small>
-						    </div>
-					</a>
-					  </div>
-				</div>
-				<div class="col-md-4">
-					<a href="/playback">
-	       			<div class="card">
-					    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/UCT_Leslie_Social_Science_lecture_theatre_class.JPG/440px-UCT_Leslie_Social_Science_lecture_theatre_class.JPG">
-					    <div class="card-body">
-					      <h5 class="card-title">Algorithms - Flow Algorithms</h5>
-					      <p class="card-text"> Professor Scott </p>
-					    </div>
-					    <div class="card-footer">
-					      <small class="text-muted">2nd Feb 2019, Duration: 59:32</small>
-					    </div>
-					    </a>
-					  </div>
-				</div>
-            </div>
+			 {{#each records }}
+					<div class="col-md-4">
+	        	<a href="/playback">
+			    		<div class="card">
+						    <img class="card-img-top" src="{{ picture }}" alt="Card image cap">
+							    <div class="card-body">
+							      <h5 class="card-title">{{ title }}</h5>
+							      <p class="card-text">{{ profesor }}</p>
+							    </div>
+						   	<div class="card-footer">
+							    <small class="text-muted">{{ date }}, Duration: {{ duration }}</small>
+							  </div>
+							</div>
+						</a>
+					</div>
+				{{/each }}
+			</div>
 <!--
 REFERENCES:
 1) Smart Icons
@@ -102,10 +76,10 @@ REFERENCES:
 
 
 </body>
-   
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-     
+
 </html>

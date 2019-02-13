@@ -14,13 +14,13 @@
 			<i class="fas fa-battery-three-quarters icon"></i>
 	</div>
 	<div class="container">
-
+		<script>console.log(data);</script>
 		<div class="row" style="background-color:#006A96; height:10%; align-items:center; display: flex">
 		<div class="col-md-2" align="center" style="width: 33%">
 			<a href="/"> <i class="fas fa-home fa-2x licon" style="color:white;"></i> </a>
 		</div>
 		<div class="col-md-8" align="center" style="width: 33%">
-			<h3 style="color:white">ProfScribe</h3>
+			<h3 style="color:white">{{ username }}</h3>
 		</div>
 		<div class="col-md-2" align="center" style="width: 33%">
 			<div class="dropdown">
@@ -47,7 +47,7 @@
 					<div class="form-group row">
 						<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
 						<div class="col-sm-8">
-							<input type="email" class="form-control" id="inputEmail3" placeholder="emcmilla@ucsd.edu">
+							<input type="email" class="form-control" id="inputEmail3" placeholder="{{ email }}">
 						</div>
 					</div>
 					<br>
@@ -62,7 +62,7 @@
 					<div class="form-group row">
 						<label for="university" class="col-sm-2 col-form-label">University</label>
 						<div class="col-sm-8">
-							<input type="text" class="form-control" id="university" placeholder="University of California – San Diego">
+							<input type="text" class="form-control" id="university" placeholder="{{ universityName }}">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
@@ -71,7 +71,7 @@
 						<label for="inputGroupSelect01" class="col-sm-2 col-form-label" style="display: block">Languages</label>
 						<div class="col-sm-2" align="right">
   							<select class="custom-select" id="inputGroupSelect01">
-  								<option class="dropdown-item">Primary</option>
+  								<option class="dropdown-item">{{ language }}</option>
     							<option class="dropdown-item">English</option>
     							<option class="dropdown-item">French</option>
    								<option class="dropdown-item">Hindi</option>
