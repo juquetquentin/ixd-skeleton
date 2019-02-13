@@ -5,6 +5,7 @@
 exports.updateProfile = function (req, res) {
   var fs = require('fs');
   var fileName = '../data.json';
+  var destination = './data.json';
   var file = require(fileName);
   console.log(req.body);
   if( req.body.email )
@@ -15,8 +16,7 @@ exports.updateProfile = function (req, res) {
     file.universityName = req.body.university;
   if( req.body.language1 )
     file.language = req.body.language1;
-  fs.writeFileSync(fileName, JSON.stringify(file));
-  var data = require('../data.json');
+  fs.writeFileSync(destination, JSON.stringify(file));
   res.redirect('/');
 };
 
