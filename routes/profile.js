@@ -9,16 +9,20 @@ exports.updateProfile = function (req, res) {
   var fileName = '../data.json';
   var file = require(fileName);
   console.log(req.body);
-  data.email = req.body.email;
-  data.password = req.body.password;
-  data.universityName = req.body.university;
-  data.language = req.body.language1;
+  if( req.body.email )
+    data.email = req.body.email;
+  if( req.body.password )
+    data.password = req.body.password;
+  if( req.body.university )
+    data.universityName = req.body.university;
+  if( req.body.language1 )
+    data.language = req.body.language1;
   fs.writeFile(fileName, JSON.stringify(file), function (err) {
     if (err)
       return console.log(err);
     console.log(JSON.stringify(file));
     console.log('writing to ' + fileName);
-    res.redirect('/');
+    res.redirect('back');
   });
 };
 

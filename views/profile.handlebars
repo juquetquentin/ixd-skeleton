@@ -1,42 +1,45 @@
 <html>
-<head>
-	<title>Profile Page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="/css/project.css" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>Profile Page</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+			<link href="/css/project.css" rel="stylesheet">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				</head>
+				<body>
+					<div class="row" style="background-color:white; height:5%">
+						<div class="col-md-10"></div>
+						<div class="col-md-2">
+							<b class="icon" style="float:right; padding-left:3%">04:20</b>
+							<i class="fas fa-wifi icon" style="float:right; padding-left:3%"></i>
+							<i class="fas fa-signal icon" style="float:right; padding-left:3%"></i>
+							<i class="fas fa-battery-three-quarters icon" style="float:right; padding-left:3%"></i>
+						</div>
+					</div>
+					<div class="row" style="background-color:#006A96; height:10%; align-items:center; display: flex">
+						<div class="col-md-2" align="center" style="width: 33%">
+							<a href="/"> <i class="fas fa-home fa-2x licon" style="color:white;"></i> </a>
+						</div>
+						<div class="col-md-8" align="center" style="width: 33%">
+							<h3 style="color:white">ProfScribe</h3>
+						</div>
+						<div class="col-md-2" align="center" style="width: 33%">
+							<div class="dropdown">
+								<i class="fas fa-bars fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;"></i>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="/profile">Profile</a>
+									<a class="dropdown-item" href="/signin">Signout</a>
+									<a class="dropdown-item" href="/help">Help</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-</head>
-<body>
-	<div class="container phonestatus">
-			<b class="icon">04:20</b>
-			<i class="fas fa-wifi icon"></i>
-			<i class="fas fa-signal icon"></i>
-			<i class="fas fa-battery-three-quarters icon"></i>
-	</div>
-	<div class="container">
-		<div class="row" style="background-color:#006A96; height:10%; align-items:center; display: flex">
-		<div class="col-md-2" align="center" style="width: 33%">
-			<a href="/"> <i class="fas fa-home fa-2x licon" style="color:white;"></i> </a>
-		</div>
-		<div class="col-md-8" align="center" style="width: 33%">
-			<h3 style="color:white">{{ username }}</h3>
-		</div>
-		<div class="col-md-2" align="center" style="width: 33%">
-			<div class="dropdown">
-				<i class="fas fa-bars fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
-				</i>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="/profile">Profile</a>
-					<a class="dropdown-item" href="/signin">Signout</a>
-					<a class="dropdown-item" href="/help">Help</a>
-				</div>
-			</div>
-		</div>
-		</div>
+
+
 		<div class="row" style="background-color:silver;height:30%" >
 			<div class="col-md-12" align="center">
 				<br>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="Default Profile Image" style="display: block; max-width: 38%; max-height: 90%;">
+				<img src="{{profileURL}}" alt="Default Profile Image" style="display: block; max-width: 38%; max-height: 90%;">
 			</div>
 		</div>
 		<div class="row"  style="background-color:silver;height:100%" >
