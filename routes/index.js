@@ -1,4 +1,4 @@
-let data = require('./data.js');
+let data = require('../data.json');
 
 /*
  * GET browse or home page.
