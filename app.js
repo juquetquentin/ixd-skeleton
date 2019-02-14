@@ -48,7 +48,25 @@ app.get('/help', help.view);
 app.get('/signout', signout.view);
 app.get('/profile', profile.view);
 
-app.post('/profile', profile.updateProfile);
+//app.post('/profile', profile.updateProfile);
+
+app.post('/profile', function(req, res) {
+  let data = require('../data.json');
+  var fs = require('fs');
+  var fileName = '../data.json';
+  var file = require(fileName);
+  console.log(req.body);
+  if( req.body.email )
+    data.email = req.body.email;
+  if( req.body.password )
+    data.password = req.body.password;
+  if( req.body.university )
+    data.universityName = req.body.university;
+  if( req.body.language1 )
+    data.language = req.body.language1;
+  fs.writeFileSync(fileName, JSON.stringify(file));
+  res.render('index', data);
+});
 // Example route
 // app.get('/users', user.list);
 
