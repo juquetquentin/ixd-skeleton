@@ -51,9 +51,9 @@ app.get('/profile', profile.view);
 //app.post('/profile', profile.updateProfile);
 
 app.post('/profile', function(req, res) {
-  let data = require('../data.json');
+  let data = require('./data.json');
   var fs = require('fs');
-  var fileName = '../data.json';
+  var fileName = './data.json';
   var file = require(fileName);
   console.log(req.body);
   if( req.body.email )
