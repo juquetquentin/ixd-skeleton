@@ -12,9 +12,10 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "google-translate-api": "*",
+    "@vitalets/google-translate-api": "github:vitalets/google-translate-api",
     "express": "3.x",
     "express3-handlebars": "*",
+    "google-translate-api": "*",
     "mongodb": "*",
     "mongoose": "*"
   },

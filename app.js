@@ -15,6 +15,7 @@ var help = require('./routes/help');
 var playback = require('./routes/playback');
 var liveplayback = require('./routes/liveplayback');
 var signin = require('./routes/signin');
+const translate = require('@vitalets/google-translate-api');
 // Example route
 // var user = require('./routes/user');
 
@@ -69,6 +70,14 @@ app.post('/profile', function(req, res) {
 });
 // Example route
 // app.get('/users', user.list);
+
+app.get('/translate', function(req, res){
+  translate( req.query.speechText, {from: 'en', to: req.query.toLang }).then(result => {
+      res.send( result.text );
+      }).catch(err => {
+          res.send( err );
+      });
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

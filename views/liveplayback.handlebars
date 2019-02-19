@@ -85,19 +85,66 @@
                 </svg>
             </div>
         </div>
+
         <div class="row" style="height: 10%; background-color:white">
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div class="card">
-                    <div class="col-md-12">
-                        <marquee id="subtitles" style="font-size: 250%"> Lecture Begins - </marquee>
+                    <div class="col-md-10">
+                        <marquee class="text-muted" id="subtitles" style="font-size: 250%"> Lecture Begins - </marquee>
                     </div>
                 </div>
             </div>
+
+
+            <div class="col-md-1" style="background-color:white">
+            <a>
+            <i  class="fas fa-cog fa-lg modalpos" data-toggle="modal" data-target=".bd-example-modal-sm" ></i>
+                                      <!-- Modal -->
+                        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                              <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Language</label>
+                              </div>
+                              <select class="custom-select" id="languageSelect">
+                                <option selected>Choose...</option>
+                                <option value="en">English</option>
+                                <option value="nl">Dutch</option>
+                              </select>
+                            </div>
+                            <!--
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Font Size</label>
+                              </div>
+                              <select class="custom-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">Small</option>
+                                <option value="2">Medium</option>
+                                <option value="3">Large</option>
+                              </select>
+                            </div>
+                              
+                              <div><span class="label label-default"> Transcripts </span>  <input id="transcript" type="checkbox" checked data-toggle="toggle"></input> <br> <br></div>
+                              -->
+                              <!--
+                             <div><span class="label label-default"> Subtitles </span> <input id="subtitles" type="checkbox" checked data-toggle="toggle"></input> <br></div><br>-->
+                             <div class="modal-footer">
+                                <button type="button" class="btn btn-dark" data-dismiss="modal" id="Close">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+            </a>
+          </div>
+
         </div>
         <div class="row" style="height: 50%; background-color:white">
             <div class="col-md-12" >
                 <div class="card" style="height: 100%">
-                    <marquee id="transcript" direction="up" scrollamount="1" style="height: 100%;font-size: 250%"> Lecture Begins -  </marquee>
+                    <samp class="breadcrumb" id="transcript" style="height: 100%;font-size: 250%; overflow-y:scroll"> Lecture Begins -  </samp>
                 </div>
             </div>
         </div>
@@ -107,84 +154,10 @@
             A PEN BY Zachary Skalko
             -->
     </body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
-    <script>
-        if (annyang) {
-          // Let's define a command.
-          var commands = {
-            'Hello': function() { alert('Hello world!'); }
-          };
-        
-          annyang.addCallback('result', function(userSaid, commandText, phrases) {
-        	  document.getElementById('subtitles').innerHTML = userSaid;
-        	  var new_transcript = document.getElementById('transcript').innerHTML + userSaid.toString().split(',')[0];
-        	  document.getElementById('transcript').innerHTML = new_transcript;
-        	});
-          // Add our commands to annyang
-          annyang.addCommands(commands);
-        
-          // Start listening.
-          annyang.start();
-        }
-    </script>
-    <script>
-        window.onload = function () {
-          "use strict";
-          var paths = document.getElementsByTagName('path');
-          var visualizer = document.getElementById('visualizer');
-          var mask = visualizer.getElementById('mask');
-          var path;
-          var report = 0;
-          
-          var soundAllowed = function (stream) {
-              //Audio stops listening in FF without // window.persistAudioStream = stream;
-              //https://bugzilla.mozilla.org/show_bug.cgi?id=965483
-              //https://support.mozilla.org/en-US/questions/984179
-              window.persistAudioStream = stream;
-              var audioContent = new AudioContext();
-              var audioStream = audioContent.createMediaStreamSource( stream );
-              var analyser = audioContent.createAnalyser();
-              audioStream.connect(analyser);
-              analyser.fftSize = 1024;
-        
-              var frequencyArray = new Uint8Array(analyser.frequencyBinCount);
-              visualizer.setAttribute('viewBox', '0 0 255 255');
-            
-        		//Through the frequencyArray has a length longer than 255, there seems to be no
-              //significant data after this point. Not worth visualizing.
-              for (var i = 0 ; i < 255; i++) {
-                  path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                  path.setAttribute('stroke-dasharray', '4,1');
-                  mask.appendChild(path);
-              }
-              var doDraw = function () {
-                  requestAnimationFrame(doDraw);
-                  analyser.getByteFrequencyData(frequencyArray);
-                	var adjustedLength;
-                  for (var i = 0 ; i < 255; i++) {
-                    	adjustedLength = Math.floor(frequencyArray[i]) - (Math.floor(frequencyArray[i]) % 5);
-                      paths[i].setAttribute('d', 'M '+ (i) +',255 l 0,-' + adjustedLength);
-                  }
-        
-              }
-              doDraw();
-          }
-        
-          var soundNotAllowed = function (error) {
-              console.log(error);
-          }
-        
-          /*window.navigator = window.navigator || {};
-          /*navigator.getUserMedia =  navigator.getUserMedia       ||
-                                    navigator.webkitGetUserMedia ||
-                                    navigator.mozGetUserMedia    ||
-                                    null;*/
-          navigator.getUserMedia({audio:true}, soundAllowed, soundNotAllowed);
-        
-        };
-    </script>
+    <script src="js/liveplayback.js"></script>
 </html>
