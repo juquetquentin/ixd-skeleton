@@ -6,30 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-	<div class="container phonestatus">
-			<b class="icon">04:20</b>
-			<i class="fas fa-wifi icon"></i>
-			<i class="fas fa-signal icon"></i>
-			<i class="fas fa-battery-three-quarters icon"></i>
-	</div>
-
-	<div class="container">
-
-		<div class="status container">
-			<a href="/"> <i class="fas fa-home fa-2x licon"></i> </a>
-			<div class="studentname"> <h3>ProfScribe</h3> </div>
-			<div class="dropdown">
-			  <i class="fas fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  </i>
-			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a class="dropdown-item" href="/profile">Profile</a>
-			    <a class="dropdown-item" href="/signout">Signout</a>
-			    <a class="dropdown-item" href="/help">Help</a>
-			  </div>
-			</div>
-		</div>
-
+	{{> toolbar }}
 		<form id="signInForm" role="form" method="get" action="/"> <!--TODO: Store Username/Password pairs & verify correctness -->
 			</br>
 			<div class="headers" align="center">Sign In</div>

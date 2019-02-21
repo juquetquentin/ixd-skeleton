@@ -63,11 +63,17 @@ app.post('/profile', function(req, res) {
     data.password = req.body.password;
   if( req.body.university )
     data.universityName = req.body.university;
-  if( req.body.language1 )
-    data.language = req.body.language1;
+  if( req.body.languages )
+    {
+      file.languages = [];
+      req.body.languages.forEach(function (language) {
+        file.languages.push({"name": language});
+      });
+    }
   fs.writeFileSync(fileName, JSON.stringify(file));
   res.render('index', data);
 });
+
 // Example route
 // app.get('/users', user.list);
 

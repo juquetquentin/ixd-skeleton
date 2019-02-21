@@ -14,8 +14,16 @@ exports.updateProfile = function (req, res) {
     file.password = req.body.password;
   if( req.body.university )
     file.universityName = req.body.university;
-  if( req.body.language1 )
-    file.language = req.body.language1;
+  if( req.languages )
+    {
+      file.languages.clear();
+      languages.forEach(function (language) {
+        file.languages.push(language);
+      });
+    }
+    console.log("file.languages =");
+    console.log(file.languages);
+
   fs.writeFileSync(destination, JSON.stringify(file));
   res.redirect('/');
 };

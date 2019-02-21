@@ -2,41 +2,12 @@
 	<head>
 		<title>Profile Page</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-			<link href="/css/project.css" rel="stylesheet">
-				<meta name="viewport" content="width=device-width, initial-scale=1">
-				</head>
-				<body>
-					<div class="row" style="background-color:white; height:5%">
-						<div class="col-md-10"></div>
-						<div class="col-md-2">
-							<b class="icon" style="float:right; padding-left:3%">04:20</b>
-							<i class="fas fa-wifi icon" style="float:right; padding-left:3%"></i>
-							<i class="fas fa-signal icon" style="float:right; padding-left:3%"></i>
-							<i class="fas fa-battery-three-quarters icon" style="float:right; padding-left:3%"></i>
-						</div>
-					</div>
-					<div class="row" style="background-color:#006A96; height:10%; align-items:center; display: flex">
-						<div class="col-md-2" align="center" style="width: 33%">
-							<a href="/"> <i class="fas fa-home fa-2x licon" style="color:white;"></i> </a>
-						</div>
-						<div class="col-md-8" align="center" style="width: 33%">
-							<h3 style="color:white">ProfScribe</h3>
-						</div>
-						<div class="col-md-2" align="center" style="width: 33%">
-							<div class="dropdown">
-								<i class="fas fa-bars fa-align-justify fa-2x icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;"></i>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="/profile">Profile</a>
-									<a class="dropdown-item" href="/signin">Signout</a>
-									<a class="dropdown-item" href="/help">Help</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-
-		<div class="row" style="background-color:silver;height:30%" >
+		<link href="/css/project.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		{{> toolbar }}
+		<div class="row" style="background-color:silver;" >
 			<div class="col-md-12" align="center">
 				<br>
 				<img src="{{ profileURL }}" alt="Default Profile Image" style="display: block; max-width: 38%; max-height: 90%;">
@@ -69,11 +40,16 @@
 						<div class="col-sm-2"></div>
 					</div>
 					<br>
+
 					<div class="form-group row">
 						<label for="inputGroupSelect01" class="col-sm-2 col-form-label" style="display: block">Languages</label>
 						<div class="col-sm-2" align="right">
-  							<select name="language1" class="custom-select" id="inputGroupSelect01">
-  								<option class="dropdown-item">{{ language }}</option>
+  							<select name="languages[]" value="language1" class="custom-select" id="inputGroupSelect01">
+  								<option class="dropdown-item">
+										{{#with languages.[0] }}
+											{{name}}
+										{{/with}}
+								</option>
     							<option class="dropdown-item">English</option>
     							<option class="dropdown-item">French</option>
    								<option class="dropdown-item">Hindi</option>
@@ -81,8 +57,12 @@
   							</select>
 						</div>
 						<div class="col-sm-2" align="center">
-  							<select name="language2" class="custom-select" id="inputGroupSelect02">
-  								<option class="dropdown-item">Secondary</option>
+  							<select name="languages[]" value="language2" class="custom-select" id="inputGroupSelect02">
+  								<option class="dropdown-item">
+										{{#with languages.[1] }}
+											{{name}}
+										{{/with}}
+									</option>
     							<option class="dropdown-item">English</option>
     							<option class="dropdown-item">French</option>
    								<option class="dropdown-item">Hindi</option>
@@ -90,8 +70,12 @@
   							</select>
 						</div>
 						<div class="col-sm-2" align="left">
-  							<select name="language3" class="custom-select" id="inputGroupSelect03">
-  								<option class="dropdown-item">Tertiary</option>
+  							<select name="languages[]" value="language3" class="custom-select" id="inputGroupSelect03">
+  								<option class="dropdown-item">
+										{{#with languages.[2] }}
+											{{name}}
+										{{/with}}
+									</option>
     							<option class="dropdown-item">English</option>
     							<option class="dropdown-item">French</option>
    								<option class="dropdown-item">Hindi</option>
@@ -99,8 +83,12 @@
 	  						</select>
 						</div>
 						<div class="col-sm-2" align="left">
-  							<select name="language4" class="custom-select" id="inputGroupSelect04">
-  								<option class="dropdown-item">Quarternary</option>
+  							<select name="languages[]" value="language4" class="custom-select" id="inputGroupSelect04">
+  								<option class="dropdown-item">
+										{{#with languages.[3] }}
+											{{name}}
+										{{/with}}
+									</option>
     							<option class="dropdown-item">English</option>
     							<option class="dropdown-item">French</option>
    								<option class="dropdown-item">Hindi</option>
