@@ -24,12 +24,14 @@
 						<div class="col-md-12" align="center" style="padding-top:1%;padding-bottom:1%">
 									<div class="dropdown">
 									  <button class="btn btn-secondary btn-lg dropdown-toggle btn-success" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton" >
-									    Recently Uploaded
+									    {{selection}}
 									  </button>
 									  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-											<a class="dropdown-item" href="/playback" id="classa">Class A</a>
-											<a class="dropdown-item" href="/playback" id="classb">Class B</a>
-											<a class="dropdown-item" href="/playback" id="classcse">CSE courses</a>
+											<a class="dropdown-item" href="/?dropdown=Physics&professorName=Udit" id="classa">Physics</a>
+											<a class="dropdown-item" href="/?dropdown=Chemistry&professorName=Quentin" id="classb">Chemistry</a>
+											<a class="dropdown-item" href="/?dropdown=Math&professorName=Eric" id="classb">Math</a>
+											<a class="dropdown-item" href="/?dropdown=Recently_Uploaded&professorName=Udit" id="classb">Recently Uploaded</a>
+											<a class="dropdown-item" href="/?dropdown=Favourites&professorName=Quentin" id="classb">Favourites</a>
 									  </div>
 									</div>
 						</div>
@@ -42,8 +44,12 @@
 			    		<div class="card">
 						    <img class="card-img-top" src="{{ picture }}" alt="Card image cap">
 							    <div class="card-body">
-							      <h5 class="card-title">{{ courseName }}</h5>
-							      <p class="card-text">{{ profesor }}</p>
+							      <h5 class="card-title">
+							      		<span class="badge badge-success"> {{courseName}} </span>
+							      </h5>
+							      <p class="card-text">
+							      <span class="badge badge-info"> {{category}} </span> <span class="badge badge-primary"> Professor {{ professorName }} </span> 
+							       </p>
 							    </div>
 						   	<div class="card-footer">
 							    <small class="text-muted">{{ date }}, Duration: {{ duration }}</small>

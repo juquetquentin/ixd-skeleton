@@ -17,7 +17,8 @@
     "express3-handlebars": "*",
     "google-translate-api": "*",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "lodash": "*"
   },
   "engines": {
     "node": "8.9.x"

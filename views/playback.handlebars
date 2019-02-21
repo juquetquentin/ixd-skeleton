@@ -117,6 +117,14 @@ REFERENCES:
         //  setTimeout(stopVideo, 6000);
         //  done = true;
         //}
+        if(event.data === 1) {
+        	if( highlight_loop == '' )
+        		highlight_loop = setInterval(highlight, 250);
+    	}
+		else if(event.data === 2) {
+		    clearInterval( highlight_loop );
+		    highlight_loop = '';
+		}
       }
       function stopVideo() {
         player.stopVideo();
