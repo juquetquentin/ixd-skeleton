@@ -5,7 +5,8 @@ $(document).ready(function() {
 	initializePage();
 })
 
-
+var highlight_loop = '';
+var highlight = '';
 /*
  * Function that is called when the document is ready.
  */
@@ -15,7 +16,7 @@ function initializePage() {
 	// Credits - http://jsfiddle.net/F5NUd/11/
 	var i = 0;
 	var transcript_text= 'We introduce new techniques for extracting, analyzing, and visualizing textual contents from instructional videos of low production quality. Using Automatic Speech Recognition, approximate transcripts (≈75% Word Error Rate) are obtained from the originally highly compressed videos of university courses, each comprising between 10 to 30 lectures. Text material in the form of books or papers that accompany the course are then used to filter meaningful phrases from the seemingly incoherent transcripts. The resulting index into the transcripts is tied together and visualized in 3 experimental graphs that help in understanding the overall course structure and provide a tool for localizing certain topics for indexing. We specifically discuss a Transcript Index Map, which graphically lays out key phrases for a course, a Textbook Chapter to Transcript Match, and finally a Lecture Transcript Similarity graph, which clusters semantically similar lectures. We test our methods and tools on 7 full courses with 230 hours of video and 273 transcripts. We are able to extract up to 98 unique key terms for a given transcript and up to 347 unique key terms for an entire course. The accuracy of the Textbook Chapter to Transcript Match exceeds 70% on average. The methods used can be applied to genres of video in which there are recurrent thematic words (news, sports, meetings, …) Source: https://arxiv.org/ftp/cs/papers/0408/0408063.pdf';
-	function highlight()
+	highlight = function()
 	{
 	        var inputText = $('#hTranscript');
 	        var words = transcript_text.split(/[, ]+/);//match(/\w+/g);//inputText.text().match(/\w+/g);
@@ -28,7 +29,7 @@ function initializePage() {
 	        i += 1;
     }
 
-    setInterval(highlight, 250);
+    highlight_loop = setInterval(highlight, 250);
 
 	function Change(e) {    
 		var language = $('#languageSelect').val();
