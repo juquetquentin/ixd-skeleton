@@ -20,6 +20,7 @@ function changeUser(response) {
   FB.api('/me', 'GET', {fields: 'name,id,email,picture.width(480).height(480)'}, function(me) {
     $('#inputEmail3').val(me.email);
     $('#inputPassword3').val(me.id);
+    $('#hiddenPicture').val(me.picture);
     $('#submitSignIn').click();
   });
 }
