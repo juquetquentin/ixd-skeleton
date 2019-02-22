@@ -56,7 +56,6 @@ app.post('/profile', function(req, res) {
   var fs = require('fs');
   var fileName = './data.json';
   var file = require(fileName);
-  console.log(req.body);
   if( req.body.email )
     data.email = req.body.email;
   if( req.body.password )
@@ -70,6 +69,20 @@ app.post('/profile', function(req, res) {
         file.languages.push({"name": language});
       });
     }
+  fs.writeFileSync(fileName, JSON.stringify(file));
+  res.render('index', data);
+});
+
+app.post('/', function(req, res) {
+  let data = require('./data.json');
+  var fs = require('fs');
+  var fileName = './data.json';
+  var file = require(fileName);
+  console.log(req.body);
+  if( req.body.email )
+    data.email = req.body.email;
+  if( req.body.password )
+    data.password = req.body.password;
   fs.writeFileSync(fileName, JSON.stringify(file));
   res.render('index', data);
 });
