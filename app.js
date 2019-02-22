@@ -78,11 +78,12 @@ app.post('/', function(req, res) {
   var fs = require('fs');
   var fileName = './data.json';
   var file = require(fileName);
-  console.log(req.body);
   if( req.body.email )
     data.email = req.body.email;
   if( req.body.password )
     data.password = req.body.password;
+  if (req.body.profilePicture)
+    data.profileURL = req.body.profilePicture;
   fs.writeFileSync(fileName, JSON.stringify(file));
   res.render('index', data);
 });
