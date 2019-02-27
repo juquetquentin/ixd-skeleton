@@ -13,6 +13,8 @@ var profile = require('./routes/profile');
 var signout = require('./routes/signout');
 var help = require('./routes/help');
 var playback = require('./routes/playback');
+var playbackA = require('./routes/playbackA');
+var playbackB = require('./routes/playbackB');
 var liveplayback = require('./routes/liveplayback');
 var signin = require('./routes/signin');
 const translate = require('@vitalets/google-translate-api');
@@ -44,6 +46,8 @@ if ('development' == app.get('env')) {
 app.get('/signin', signin.view);
 app.get('/', index.view);
 app.get('/playback', playback.view);
+app.get('/playbackA', playbackA.view);
+app.get('/playbackB', playbackB.view);
 app.get('/liveplayback', liveplayback.view);
 app.get('/help', help.view);
 app.get('/signout', signout.view);
