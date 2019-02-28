@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var profile = require('./routes/profile');
-var signout = require('./routes/signout');
+var signup = require('./routes/signup');
 var help = require('./routes/help');
 var playback = require('./routes/playback');
 var playbackA = require('./routes/playbackA');
@@ -50,7 +50,7 @@ app.get('/playbackA', playbackA.view);
 app.get('/playbackB', playbackB.view);
 app.get('/liveplayback', liveplayback.view);
 app.get('/help', help.view);
-app.get('/signout', signout.view);
+app.get('/signup', signup.view);
 app.get('/profile', profile.view);
 
 //app.post('/profile', profile.updateProfile);
