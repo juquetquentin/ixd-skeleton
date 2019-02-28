@@ -20,7 +20,7 @@ function initializePage() {
 	{
 	        var inputText = $('#hTranscript');
 	        var words = transcript_text.split(/[, ]+/);//match(/\w+/g);//inputText.text().match(/\w+/g);
-	        if (i >= words.length) {
+	        if (i >= 10) {
 	            i = 0;
 	        }
 	        words.splice(i, 0, "<mark style='background-color: yellow;color: black; font-weight:bold'>");
@@ -34,13 +34,13 @@ function initializePage() {
 	function Change(e) {    
 		var language = $('#languageSelect').val();
 		console.log( language );
-
-		player.setOption("captions", "track", {"languageCode": language});
+        
+		//player.setOption("captions", "track", {"languageCode": language});
 		var parameters = { "speechText": transcript_text, "toLang": language };
 		$.get('/translate', parameters, function(data){
 
-                  var fontSize = $('#fontSelect').val() + "%";
-                  console.log( fontSize );
+                  // var fontSize = $('#fontSelect').val() + "%";
+                  // console.log( fontSize );
        			  //$('#hTranscript').css("font-size", fontSize+"%");
 
                   var new_transcript = data;
@@ -48,9 +48,7 @@ function initializePage() {
                   transcript_text = new_transcript;
                   i = 0;
                   console.log(data);
-
-                  document.getElementById('hTranscript').style.fontSize = fontSize;
-
+                  //document.getElementById('hTranscript').style.fontSize = fontSize;
         });
 
 
@@ -60,7 +58,7 @@ function initializePage() {
 			$('#hTranscript').attr('hidden', true );
 		else
 			$('#hTranscript').attr('hidden', false );
-
+		/*
 		var subtitles = $('#subtitles').prop('checked');
 		if( subtitles == false )
 		{
@@ -69,7 +67,7 @@ function initializePage() {
 		else
 		{
 			player.loadModule("captions");
-		}
+		}*/
 		
 	};
 

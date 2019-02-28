@@ -96,7 +96,7 @@ app.post('/', function(req, res) {
 // app.get('/users', user.list);
 
 app.get('/translate', function(req, res){
-  translate( req.query.speechText, {from: 'en', to: req.query.toLang }).then(result => {
+  translate( req.query.speechText, {from: req.query.fromLang, to: req.query.toLang }).then(result => {
       res.send( result.text );
       }).catch(err => {
           res.send( err );

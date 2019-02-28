@@ -32,11 +32,12 @@ function initializePage() {
     highlight_loop = setInterval(highlight, 250);
 
 	function Change(e) {    
+		var fromLang = language;
 		var language = $('#languageSelect').val();
-		console.log( language );
+		console.log( fromLang, language );
         
 		//player.setOption("captions", "track", {"languageCode": language});
-		var parameters = { "speechText": transcript_text, "toLang": language };
+		var parameters = { "speechText": transcript_text, "toLang": language, "fromLang" : fromLang };
 		$.get('/translate', parameters, function(data){
 
                   // var fontSize = $('#fontSelect').val() + "%";
