@@ -108,6 +108,24 @@ app.post('/', function(req, res) {
     data.password = req.body.password;
   if (req.body.profilePicture && !req.body.profilePicture.empty())
     data.profileURL = req.body.profilePicture;
+
+
+  function alreadyExisting(user) {
+    var date = new Date().toString();
+    if (user.email === req.body.email && user.password === req.body.password) {
+      user.allConnections.push(date);
+    } else {
+      data.users.push({
+        "email": req.body.email,
+        "password": req.body.password,
+        "firstConnection": date,
+        "allConnections": [date],
+        "facebookConnection": false
+      });
+    }
+      return true;
+  }
+  console.log(data.users.find(alreadyExisting));
   fs.writeFileSync(fileName, JSON.stringify(file));
   res.render('index', data);
 });
