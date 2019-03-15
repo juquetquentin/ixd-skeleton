@@ -33,3 +33,4 @@ Now let’s go back to the home page.
 * https://getbootstrap.com/
 * http://ixd.ucsd.edu/home/w19/index.php
 * https://analytics.google.com/analytics/web/#/
+* https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png
